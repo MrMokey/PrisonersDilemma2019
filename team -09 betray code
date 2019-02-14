@@ -1,0 +1,11 @@
+import random
+
+team_name = 'Kteins Fate:0'
+team_strategy =  'if they betrayed last, I collude no matter what, if they collude we betray no matter what'
+strategy_description = 'hamburgers are yummy XD. so basically we will do the oppisite of what the other team do so that we either make them mad or make them win'
+
+def move(my_history, their_history, my_score, their_score):
+    if len(my_history) >= 1 and their_history[-1] == 'b':
+      return 'c'
+    else:
+      return 'b'
