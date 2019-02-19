@@ -1,0 +1,18 @@
+import random
+
+team_name = 'Kteins Fate:0'
+team_strategy =  'if they betrayed last, I betray no matter what, if they collude we collude no matter what, if they input the secre code (Me Gusta), We collude no matter what or else the output will be chosed at random( also do nothing is a rare easter that will appear rarly)'
+strategy_description = 'hamburgers are yummy XD.  If they betray, I betray, If they Collide I Collide, or else it will be a choice of random((easter egg! there wil be a (do nothing) choice and it will...ehh do nothing XD but the chance of that happening is really rare.( also if you or your they put this secret code (Me Gusta), it will return c no matter what. '
+
+def move(my_history, their_history, my_score, their_score):
+    if len(my_history) >= 1 and their_history[-1] == 'b':
+      return 'b'
+    elif len(their_history) >= 1 and my_history[-1] == 'b':
+      return 'c'
+    elif len(my_history) >= 1 and their_history[-1] == 'Me Gusta':
+      return 'c'
+    elif len(their_history) >= 1 and my_history[-1] == 'Me Gusta':
+      return 'c'
+    else:
+      choices = ['c','c','c','c','c','c','c','c','c','c','c','c','c','c','c','c','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b','b','do nothing']
+      return random.choice(choices)
